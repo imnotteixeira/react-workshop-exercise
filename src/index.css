@@ -16,7 +16,7 @@ code {
 .homepage {
     height: 100vh;
     width: 100vw;
-    background-color: #ddd;
+    /* background-color: #ddd; */
     display: flex;
     flex-direction: column;
     align-items: center;

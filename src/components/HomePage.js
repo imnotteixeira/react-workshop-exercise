@@ -17,7 +17,6 @@ const HomePage = () => {
             <Card>
                 <CardContent className="card">
                     <TextField
-
                         value={team}
                         label="Team"
                         onChange={handleChange(setTeam)}
@@ -27,9 +26,16 @@ const HomePage = () => {
                         label="Repo"
                         onChange={handleChange(setRepo)}
                     />
-                    <Link component={Button} variant="contained" color="primary" to={`${team}/${repo}/issues`}>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        component={Link}
+                        to={`${team}/${repo}/issues`}
+                        disabled={!team || !repo}
+                    >
                         Show Issues
-                    </Link>
+
+                    </Button>
                 </CardContent>
             </Card>
         </div>
